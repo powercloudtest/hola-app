@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hola
+spec:
+  selector:
+    app: hola
+  ports:
+    - port: 80
+      targetPort: 3333
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hola
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hola
+  template:
+    metadata:
+      labels:
+        app: hola
+    spec:
+      containers:
+        - name: hola
+          image: 190.210.212.42:6453/hello-world-nodejs:0.2.0
+          ports:
+            - containerPort: 3333
+          imagePullPolicy: Always
