@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hola
-          image: 190.210.212.42:6453/hello-world-nodejs:0.2.0
+          image: 10.250.1.101:5000/hello-world-nodejs:latest
           ports:
             - containerPort: 3333
           imagePullPolicy: Always
