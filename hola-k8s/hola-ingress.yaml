@@ -16,8 +16,8 @@ spec:
           service:
             name: hola
             port:
-              number: 10257
-        path: /metrics
+              number: 80
+        path: /
         pathType: Prefix
 status:
   loadBalancer:
