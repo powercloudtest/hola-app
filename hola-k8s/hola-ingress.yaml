@@ -5,8 +5,8 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
-  name: ingress-kube-system
-  namespace: kube-system
+  name: hola-app-ingress
+  namespace: hola-app
 spec:
   rules:
   - host: holaapp
